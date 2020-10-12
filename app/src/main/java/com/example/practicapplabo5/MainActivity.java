@@ -21,8 +21,8 @@ import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    public List<Producto> productos;
     private ProductoAdapter productoAdapter;
+    public List<Producto> productos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnAdd:
                 producto.setCantidad(producto.getCantidad() + 1);
                 this.productos.set(this.productos.indexOf(producto), producto);
-                showToast(getString(R.string.btnSumarMensaje) + producto.getNombreProducto());
+                showToast(getString(R.string.btnSumarMensaje) + "\n" + getProductMessage(producto));
                 break;
             case R.id.btnDelete:
                 producto.setCantidad(producto.getCantidad() - 1);
                 this.productos.set(this.productos.indexOf(producto), producto);
-                showToast(getString(R.string.btnRestarMensaje) + producto.getNombreProducto());
+                showToast(getString(R.string.btnRestarMensaje) + "\n" + getProductMessage(producto));
                 break;
             case R.id.btnEdit:
 
@@ -89,6 +89,13 @@ public class MainActivity extends AppCompatActivity {
             productos.add(new Producto(15, 545, "Oil"));
             productos.add(new Producto(31, 545, "Soda"));
         }
+    }
+
+    private String getProductMessage(Producto producto){
+        return  getString(R.string.producto) +
+                producto.getNombreProducto() + "\n" +
+                getString(R.string.precioUnidad) +
+                Double.toString(producto.getPrecioUnidad());
     }
 
 }

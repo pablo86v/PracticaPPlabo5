@@ -3,6 +3,7 @@
     <string name="app_name">Stock Control</string>
     <string name="cantidad">Quantity: </string>
     <string name="precioUnidad">Unit price: </string>
+    <string name="producto">Product: </string>
     <string name="btnRestarMensaje">Item deleted from: </string>
     <string name="btnSumarMensaje">Item added to: </string>
 </resources>
