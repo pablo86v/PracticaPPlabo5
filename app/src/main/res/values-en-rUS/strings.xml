@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Stock Control</string>
+    <string name="cantidad">Quantity: </string>
+    <string name="precioUnidad">Unit price: </string>
+    <string name="btnRestarMensaje">Item deleted from: </string>
+    <string name="btnSumarMensaje">Item added to: </string>
+</resources>

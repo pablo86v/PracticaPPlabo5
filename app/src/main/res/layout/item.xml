@@ -1,24 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-        <TextView
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvNombreProducto"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nombre producto"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                />
+
+            <ImageButton
+                android:id="@+id/btnEdit"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="end"
+                android:src="@drawable/lapiz"
+                android:background="@null"
+                android:layout_marginRight="15dp"
+                android:scaleType="fitCenter"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvNombreProducto"/>
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
 
-        <ImageButton
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="@string/cantidad"
+                android:textAlignment="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="3dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/txtCantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="10"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/precioUnidad"
+                android:textAlignment="textEnd"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_marginRight="3dp"/>
+
+            <TextView
+                android:id="@+id/txtPrecioUnidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="21.15"
+                android:layout_gravity="end"
+                android:layout_marginRight="20dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/pencil"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
 
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableRight="@drawable/menos"
+                android:layout_marginRight="20dp"
+                />
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawableLeft="@drawable/mas"
+                android:layout_marginLeft="20dp"
+                />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-</LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+
+

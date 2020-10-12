@@ -3,6 +3,7 @@ package com.example.practicapplabo5;
 public class Producto {
     private int cantidad;
     private double precioUnidad;
+    private String nombreProducto;
 
     public Producto(int cantidad, double precioUnidad, String nombreProducto) {
         this.cantidad = cantidad;
@@ -18,9 +19,6 @@ public class Producto {
         this.nombreProducto = nombreProducto;
     }
 
-    private String nombreProducto;
-
-
     public int getCantidad() {
         return cantidad;
     }
@@ -35,5 +33,14 @@ public class Producto {
 
     public void setPrecioUnidad(double precioUnidad) {
         this.precioUnidad = precioUnidad;
+    }
+
+    @Override
+    public String toString() {
+        return "Producto{" +
+                "cantidad=" + cantidad +
+                ", precioUnidad=" + precioUnidad +
+                ", nombreProducto='" + nombreProducto + '\'' +
+                '}';
     }
 }

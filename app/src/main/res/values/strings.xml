@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">PracticaPPlabo5</string>
+    <string name="app_name">Control de stock</string>
+    <string name="cantidad">Cantidad: </string>
+    <string name="precioUnidad">Precio unidad: </string>
+    <string name="btnRestarMensaje">Se restó un item de: </string>
+    <string name="btnSumarMensaje">Se agregó un item a: </string>
 </resources>
