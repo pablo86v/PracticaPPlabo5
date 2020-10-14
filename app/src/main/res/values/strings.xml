@@ -5,4 +5,9 @@
     <string name="producto">Producto: </string>
     <string name="btnRestarMensaje">Se restó un item de: </string>
     <string name="btnSumarMensaje">Se agregó un item a: </string>
+
+    <string name="tituloDialog">Ingrese un nombre nuevo: </string>
+    <string name="btnOk">Aceptar</string>
+    <string name="btnCancel">Cancelar</string>
+
 </resources>

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Dialog.NameDialogListener {
     private ProductoAdapter productoAdapter;
     public List<Producto> productos;
 
@@ -57,13 +57,18 @@ public class MainActivity extends AppCompatActivity {
                 showToast(getString(R.string.btnRestarMensaje) + "\n" + getProductMessage(producto));
                 break;
             case R.id.btnEdit:
-
+                openDialog(producto);
                 break;
             default:
                 Log.d("Click","Easter egg");
         }
 
         this.productoAdapter.notifyDataSetChanged();
+    }
+
+    private void openDialog(Producto producto) {
+        Dialog dialog = new Dialog(producto);
+        dialog.show(getSupportFragmentManager(),"Modifique");
     }
 
     private void showToast(String message){
@@ -98,4 +103,11 @@ public class MainActivity extends AppCompatActivity {
                 Double.toString(producto.getPrecioUnidad());
     }
 
+    @Override
+    public void modificarNombre(String nombre, Producto producto) {
+        producto.setNombreProducto(nombre);
+        Log.d("p", producto.toString());
+        this.productos.set(this.productos.indexOf(producto), producto);
+        this.productoAdapter.notifyDataSetChanged();
+    }
 }

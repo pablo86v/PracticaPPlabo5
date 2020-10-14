@@ -6,4 +6,10 @@
     <string name="producto">Product: </string>
     <string name="btnRestarMensaje">Item deleted from: </string>
     <string name="btnSumarMensaje">Item added to: </string>
+
+
+    <string name="tituloDialog">Enter a new name:</string>
+    <string name="btnOk">Accept</string>
+    <string name="btnCancel">Cancel</string>
+
 </resources>
