@@ -104,9 +104,7 @@ public class MainActivity extends AppCompatActivity implements Dialog.NameDialog
     }
 
     @Override
-    public void modificarNombre(String nombre, Producto producto) {
-        producto.setNombreProducto(nombre);
-        Log.d("p", producto.toString());
+    public void actualizarProducto(Producto producto) {
         this.productos.set(this.productos.indexOf(producto), producto);
         this.productoAdapter.notifyDataSetChanged();
     }

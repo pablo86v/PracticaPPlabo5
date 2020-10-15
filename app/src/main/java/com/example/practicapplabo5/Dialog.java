@@ -41,8 +41,9 @@ public class Dialog extends DialogFragment {
                 .setPositiveButton(R.string.btnOk, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        String nombre = editNombre.getText().toString();
-                        listener.modificarNombre(nombre, producto);
+                        String nombreNuevo = editNombre.getText().toString();
+                        producto.setNombreProducto(nombreNuevo);
+                        listener.actualizarProducto(producto);
                     }
                 })
                 .setNegativeButton(R.string.btnCancel, new DialogInterface.OnClickListener() {
@@ -64,7 +65,7 @@ public class Dialog extends DialogFragment {
     }
 
     public interface  NameDialogListener{
-        void modificarNombre(String nombre, Producto producto);
+        void actualizarProducto(Producto producto);
     }
 
 }
